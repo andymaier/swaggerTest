@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "7f8c0847-037e-48c3-8981-d663ce2deb43",
+		"name": "ArticleAPI",
+		"description": "ArticleAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "artikel",
+			"item": [
+				{
+					"name": "{aid}",
+					"item": [
+						{
+							"name": "Gebe einen Artikel zurück",
+							"id": "b5c36f2e-ab6a-469c-87d7-1a91f345b4d3",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/artikel/:aid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"artikel",
+										":aid"
+									],
+									"variable": [
+										{
+											"id": "343eb043-0eac-423d-8d90-57e67980dbab",
+											"key": "aid",
+											"value": "dolore ullamco",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Liefert einen Artikel zurück"
+							},
+							"response": [
+								{
+									"id": "d37c45ba-daed-4666-8963-f8102dfe4902",
+									"name": "ok",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/artikel/:aid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"artikel",
+												":aid"
+											],
+											"variable": [
+												{
+													"key": "aid",
+													"value": "dolore ullamco",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"name\": \"Bananen\",\n  \"preis\": 0.99\n}"
+								}
+							]
+						},
+						{
+							"name": "Ändere einen Artikel zurück",
+							"id": "570576f1-c886-42b8-81ac-a262b90b582e",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/artikel/:aid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"artikel",
+										":aid"
+									],
+									"variable": [
+										{
+											"id": "36e73877-ee58-41b1-bfa7-5213e1902e24",
+											"key": "aid",
+											"value": "dolore ullamco",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Liefert einen veränderten Artikel zurück"
+							},
+							"response": [
+								{
+									"id": "7f19ca95-ff5e-4af3-8581-bb80c67e41ae",
+									"name": "ok",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/artikel/:aid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"artikel",
+												":aid"
+											],
+											"variable": [
+												{
+													"key": "aid",
+													"value": "dolore ullamco",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"name\": \"Bananen\",\n  \"preis\": 0.99\n}"
+								}
+							]
+						},
+						{
+							"name": "Löscht einen Artikel zurück",
+							"id": "c1169903-5b16-46bb-a999-c20f86be1b98",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/artikel/:aid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"artikel",
+										":aid"
+									],
+									"variable": [
+										{
+											"id": "dc184b89-d607-48d4-8543-a4e01a2cf729",
+											"key": "aid",
+											"value": "dolore ullamco",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Löscht einen Artikel"
+							},
+							"response": [
+								{
+									"id": "9c42b304-887d-4a88-9f99-f510769a7b8b",
+									"name": "deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/artikel/:aid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"artikel",
+												":aid"
+											],
+											"variable": [
+												{
+													"key": "aid",
+													"value": "dolore ullamco",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "60465547-7728-4816-bbd2-06b5b1815b76"
+				},
+				{
+					"name": "Gebe alle Artikel zurück",
+					"id": "3c86a548-dca5-4a78-a039-2737a60091f7",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/artikel/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"artikel",
+								""
+							]
+						},
+						"description": "Liefert alle Artikel zurück"
+					},
+					"response": [
+						{
+							"id": "ad8e41d9-dfbf-4e12-811e-e8dd6de62073",
+							"name": "ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/artikel/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"artikel",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n  {\n    \"name\": \"Bananen\",\n    \"preis\": 0.99\n  },\n  {\n    \"name\": \"Bananen\",\n    \"preis\": 0.99\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Erstelle einen Artikel",
+					"id": "28d6314f-0f25-4bd3-8e03-831989696dd3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Bananen\",\n  \"preis\": 0.99\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/artikel/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"artikel",
+								""
+							]
+						},
+						"description": "# Ein Artikel wird erstellt\n\nEin **Artikel** besteht aus:\n  - Name\n  - Preis\n\nEmphasis, aka italics, with *asterisks* or _underscores_.\nStrong emphasis, aka bold, with **asterisks** or __underscores__.\nCombined emphasis with **asterisks and _underscores_**.\nStrikethrough uses two tildes. ~~Scratch this.~~\n\nInline-style: \n![alt text](https://cdn-images.visual-paradigm.com/features/v15/2/aws-architecture-diagram-tool/aws-architecture-design-tool.png \"Logo Title Text 1\")\n"
+					},
+					"response": [
+						{
+							"id": "0a695e70-ea1c-4b2b-bb71-30483b487fc4",
+							"name": "created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Bananen\",\n  \"preis\": 0.99\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/artikel/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"artikel",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"name\": \"Bananen\",\n  \"preis\": 0.99\n}"
+						}
+					]
+				}
+			],
+			"id": "04bf2487-a490-4334-9c47-d44795b12073"
+		}
+	],
+	"variable": [
+		{
+			"id": "31ddd063-0397-41bc-8de1-8abc035a81cb",
+			"key": "baseUrl",
+			"value": "https://virtserver.swaggerhub.com/FAKEMAIL_1/ArticleAPI/ArticleAPI",
+			"type": "string"
+		}
+	]
+}
