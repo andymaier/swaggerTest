@@ -1,0 +1,116 @@
+---
+openapi: 3.0.0
+info:
+  title: ArticleAPI
+  description: ArticleAPI
+  version: ArticleAPI
+servers:
+- url: https://virtserver.swaggerhub.com/FAKEMAIL_1/ArticleAPI/ArticleAPI
+  description: SwaggerHub API Auto Mocking
+paths:
+  /artikel/:
+    get:
+      tags:
+      - Shop
+      summary: Gebe alle Artikel zurück
+      description: Liefert alle Artikel zurück
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Artikel'
+    post:
+      tags:
+      - Shop
+      summary: Erstelle einen Artikel
+      description: "# Ein Artikel wird erstellt\n\nEin **Artikel** besteht aus:\n  - Name\n  - Preis\n\nEmphasis, aka italics, with *asterisks* or _underscores_.\nStrong emphasis, aka bold, with **asterisks** or __underscores__.\nCombined emphasis with **asterisks and _underscores_**.\nStrikethrough uses two tildes. ~~Scratch this.~~\n\nInline-style: \n![alt text](https://cdn-images.visual-paradigm.com/features/v15/2/aws-architecture-diagram-tool/aws-architecture-design-tool.png \"Logo Title Text 1\")\n"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Artikel'
+      responses:
+        "201":
+          description: created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artikel'
+  /artikel/{aid}:
+    get:
+      tags:
+      - Shop
+      summary: Gebe einen Artikel zurück
+      description: Liefert einen Artikel zurück
+      parameters:
+      - name: aid
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artikel'
+    put:
+      tags:
+      - Shop
+      summary: Ändere einen Artikel zurück
+      description: Liefert einen veränderten Artikel zurück
+      parameters:
+      - name: aid
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artikel'
+    delete:
+      tags:
+      - Shop
+      summary: Löscht einen Artikel zurück
+      description: Löscht einen Artikel
+      parameters:
+      - name: aid
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: deleted
+components:
+  schemas:
+    Artikel:
+      required:
+      - name
+      - preis
+      properties:
+        name:
+          maxLength: 40
+          type: string
+          description: Name des Artikels
+          example: Bananen
+        preis:
+          minimum: 0
+          type: number
+          description: Preis des Artikels
+          example: 0.99
