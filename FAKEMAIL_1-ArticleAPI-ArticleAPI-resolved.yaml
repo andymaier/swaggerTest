@@ -12,7 +12,7 @@ paths:
     get:
       tags:
       - Shop
-      summary: Gebe alle Artikel zurück
+      summary: Gebe alle Artikel zurück DAS IST EIN TEST
       description: Liefert alle Artikel zurück
       responses:
         "200":
